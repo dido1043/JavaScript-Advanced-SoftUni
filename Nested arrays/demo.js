@@ -5,5 +5,5 @@ for (let i = 0; i < arrays.length; i++) {
         const el = element[j];
         console.log(el);
     }
-    
+    console.log("\n");
 }
