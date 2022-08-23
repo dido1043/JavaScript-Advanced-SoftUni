@@ -3,9 +3,9 @@ function task(arr) {
   let result = [];
   class Town {
     constructor(town, latitude, longtitude) {
-      this.town = town;
-      this.latitude = +latitude;
-      this.longtitude = +longtitude;
+      this.Town = town;
+      this.Latitude = +latitude;
+      this.Longitude = +longtitude;
     }
   }
 
@@ -14,7 +14,10 @@ function task(arr) {
       .split("|")
       .map((t) => t.trim())
       .filter((x) => x.length != 0);
-    let towns = new Town(editedArr[0], editedArr[1], editedArr[2]);
+      let town = editedArr[0];
+      let latitude = +editedArr[1];
+      let longtitude = +editedArr[2];
+    let towns = new Town(town,latitude.toFixed(2) ,longtitude.toFixed(2) );
     result.push(towns)
   }
   return JSON.stringify(result);
